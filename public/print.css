@@ -2,16 +2,16 @@
 
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  html, body { background: #eef1e9 !important; }
+  html, body { background: #E6F2EE !important; }
   body::before, .scroll-progress, .topbar, .hero__actions { display: none !important; }
   .reveal, [data-split], .word-mask, .word-mask > * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
   .shell { width: 100% !important; max-width: none !important; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 10mm; padding: 5mm 0 12mm; break-after: page; }
   .hero h1 { max-width: 160mm; font-size: 42pt; }
-  .hero h1, .hero h1 .word-mask > span { color: #06110e !important; }
-  .hero h1 em, .hero h1 .word-mask > em { color: #12886b !important; }
+  .hero h1, .hero h1 .word-mask > span { color: #081210 !important; }
+  .hero h1 em, .hero h1 .word-mask > em { color: #39FFD0 !important; }
   .hero__lead { max-width: 150mm; font-size: 12pt; }
-  .hero__facts b { color: #06110e !important; }
+  .hero__facts b { color: #081210 !important; }
   .hero__facts { max-width: 160mm; }
   .system-visual { width: 100%; min-height: 165mm; break-inside: avoid; }
   .system-visual__canvas { height: 136mm; }
@@ -25,11 +25,14 @@
   .scope-card { min-height: 58mm; padding: 6mm; break-inside: avoid; }
   .scope-card h3 { margin-top: 12mm; font-size: 15pt; }
   .notice { break-inside: avoid; }
-  .section--route { break-before: page; }
-  .route-orbit { width: 35mm; height: 35mm; }
-  .timeline { margin-top: 12mm; }
-  .timeline li { min-height: 31mm; break-inside: avoid; }
-  .timeline div { padding-bottom: 6mm; }
+  .section--route { break-before: page; padding-block: 10mm; }
+  .route-head h2 { font-size: 28pt; }
+  .route-orbit { width: 28mm; height: 28mm; }
+  .route-intro { margin-top: 4mm; font-size: 9pt; }
+  .timeline { margin-top: 8mm; }
+  .timeline li { min-height: 24mm; break-inside: avoid; }
+  .timeline div { padding-bottom: 3mm; }
+  .timeline p { font-size: 9pt; }
   .section--investment { break-before: page; }
   .investment-card { grid-template-columns: 1fr; break-inside: avoid; }
   .investment-card__price { min-height: 75mm; }
@@ -38,5 +41,5 @@
   .extra, .terms { break-inside: avoid; }
   .closing { min-height: auto; margin-inline: -12mm; padding-inline: 12mm; }
   .closing__inner { min-height: 105mm; }
-  footer { margin-inline: -12mm; padding-inline: 12mm; }
+  footer { display: none !important; }
 }
