@@ -1,0 +1,16 @@
+/* Ajuste de lectura móvil: preserva la retícula del documento sin desbordar titulares. */
+@media (max-width: 480px) {
+  body { overflow-x: hidden; }
+  .hero__copy { min-width: 0; }
+  h1 {
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+    overflow-wrap: anywhere;
+  }
+  .lead { font-size: 17px; }
+  .hero__actions { gap: 9px; }
+  .button { padding: 12px 14px; font-size: 10px; }
+  .meta-row { font-size: 8px; }
+}

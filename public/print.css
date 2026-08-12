@@ -1,0 +1,6 @@
+/* Composición de la versión descargable: mantiene los adicionales como bloque completo. */
+@media print {
+  .extras { break-before: page; }
+  .extra, .terms { break-inside: avoid; }
+  .sources { break-before: page; }
+}

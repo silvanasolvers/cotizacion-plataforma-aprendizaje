@@ -1,0 +1,12 @@
+{
+  "name": "cotizacion-plataforma-aprendizaje",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Estudio de mercado y cotización para una plataforma educativa personalizada.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node scripts/check.js"
+  },
+  "engines": { "node": ">=20" }
+}
