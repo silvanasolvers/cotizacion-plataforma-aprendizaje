@@ -2,16 +2,16 @@
 
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  html, body { background: #081210 !important; color: #E6F2EE !important; }
+  html, body { background: #eef1e9 !important; }
   body::before, .scroll-progress, .topbar, .hero__actions { display: none !important; }
   .reveal, [data-split], .word-mask, .word-mask > * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
   .shell { width: 100% !important; max-width: none !important; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 10mm; padding: 5mm 0 12mm; break-after: page; }
   .hero h1 { max-width: 160mm; font-size: 42pt; }
-  .hero h1, .hero h1 .word-mask > span { color: #E6F2EE !important; }
-  .hero h1 em, .hero h1 .word-mask > em { color: #E6F2EE !important; }
+  .hero h1, .hero h1 .word-mask > span { color: #06110e !important; }
+  .hero h1 em, .hero h1 .word-mask > em { color: #12886b !important; }
   .hero__lead { max-width: 150mm; font-size: 12pt; }
-  .hero__facts b { color: #E6F2EE !important; }
+  .hero__facts b { color: #06110e !important; }
   .hero__facts { max-width: 160mm; }
   .system-visual { width: 100%; min-height: 165mm; break-inside: avoid; }
   .system-visual__canvas { height: 136mm; }
@@ -26,16 +26,10 @@
   .scope-card h3 { margin-top: 12mm; font-size: 15pt; }
   .notice { break-inside: avoid; }
   .section--route { break-before: page; }
-  .route-head { align-items: center; }
-  .route-head h2 { margin-top: 4mm; font-size: 26pt; }
-  .route-intro { margin-top: 3mm; font-size: 9pt; }
-  .route-orbit { width: 27mm; height: 27mm; }
-  .route-orbit strong { font-size: 28pt; }
-  .timeline { margin-top: 7mm; }
-  .timeline li { min-height: 23mm; break-inside: avoid; }
-  .timeline div { gap: 4mm; padding-bottom: 3mm; }
-  .timeline h3 { font-size: 13pt; }
-  .timeline p { font-size: 8.5pt; }
+  .route-orbit { width: 35mm; height: 35mm; }
+  .timeline { margin-top: 12mm; }
+  .timeline li { min-height: 31mm; break-inside: avoid; }
+  .timeline div { padding-bottom: 6mm; }
   .section--investment { break-before: page; }
   .investment-card { grid-template-columns: 1fr; break-inside: avoid; }
   .investment-card__price { min-height: 75mm; }
@@ -43,10 +37,6 @@
   .extras { break-before: page; }
   .extra, .terms { break-inside: avoid; }
   .closing { min-height: auto; margin-inline: -12mm; padding-inline: 12mm; }
-  .closing__inner { min-height: 54mm; padding-block: 10mm; }
-  .closing h2 { margin-top: 3mm; font-size: 28pt; }
-  .closing__download { min-width: 72mm; padding: 3mm; }
-  .closing__download i { width: 10mm; height: 10mm; }
+  .closing__inner { min-height: 105mm; }
   footer { margin-inline: -12mm; padding-inline: 12mm; }
-  footer .shell { min-height: 19mm; }
 }
