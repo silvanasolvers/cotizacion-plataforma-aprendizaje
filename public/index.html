@@ -3,58 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#081210">
+  <meta name="theme-color" content="#06110e">
   <meta name="description" content="Cotización comercial para una plataforma educativa personalizada.">
   <title>Cotización · Plataforma educativa personalizada</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/mobile.css">
-  <link rel="stylesheet" href="/print.css">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20260811-pro">
+  <link rel="stylesheet" href="/print.css?v=20260811-pro" media="print">
+  <script src="/app.js?v=20260811-pro" defer></script>
 </head>
 <body>
-  <header class="topbar"><div class="shell topbar__inner">
-    <a class="brand" href="#inicio" aria-label="spaceship inicio"><svg viewBox="0 0 200 100" aria-hidden="true"><path d="M20 50C20 22 62 22 100 50c38 28 80 28 80 0"/><path d="M180 50c0-28-42-28-80 0C62 78 20 78 20 50"/><circle cx="20" cy="50" r="7"/><circle cx="180" cy="50" r="7"/></svg><span>spaceship</span></a>
-    <span class="topbar__meta">COTIZACIÓN · 11 AGO 2026</span>
-    <a class="button button--small" href="/docs/cotizacion-plataforma-aprendizaje.pdf" download>Descargar PDF <span>↓</span></a>
-  </div></header>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+  <header class="topbar">
+    <div class="shell topbar__inner">
+      <a class="brand" href="#inicio" aria-label="spaceship · inicio"><svg viewBox="0 0 200 100" aria-hidden="true"><path d="M20 50C20 22 62 22 100 50c38 28 80 28 80 0"/><path d="M180 50c0-28-42-28-80 0C62 78 20 78 20 50"/><circle cx="20" cy="50" r="7"/><circle cx="180" cy="50" r="7"/></svg><span>spaceship</span></a>
+      <nav class="topnav" aria-label="Navegación de la cotización"><a href="#alcance">Alcance</a><a href="#ruta">Ruta</a><a href="#inversion">Inversión</a></nav>
+      <a class="download" href="/docs/cotizacion-plataforma-aprendizaje.pdf" download><span>Descargar PDF</span><i>↓</i></a>
+    </div>
+  </header>
 
   <main id="inicio">
     <section class="hero shell">
       <div class="hero__copy">
-        <div class="kicker"><i></i> EDU-OPS · COTIZACIÓN 01</div>
-        <h1>La metodología del profesor <em>se vuelve plataforma.</em></h1>
-        <p class="lead">Sistema educativo personalizado para que docentes creen dinámicas interactivas de inglés y habilidades para la vida, con control individual de acceso y progreso.</p>
-        <div class="hero__actions"><a class="button button--primary" href="#inversion">Ver inversión <span>↓</span></a><a class="button" href="#alcance">Ver alcance <span>→</span></a></div>
-        <div class="meta-row"><span>DESARROLLO A MEDIDA</span><b>·</b><span>INFRAESTRUCTURA PROPIA</span><b>·</b><span>6 SEMANAS</span></div>
+        <p class="kicker reveal"><i></i> EDU-OPS · COTIZACIÓN 01</p>
+        <h1 data-split>La metodología del profesor <em>se vuelve plataforma.</em></h1>
+        <p class="hero__lead reveal">Sistema educativo personalizado para que docentes creen dinámicas interactivas de inglés y habilidades para la vida, con control individual de acceso y progreso.</p>
+        <div class="hero__actions reveal"><a class="button button--primary" href="#inversion">Ver inversión <span>↓</span></a><a class="button" href="#alcance">Explorar el sistema <span>→</span></a></div>
+        <div class="hero__facts reveal"><div><span>ENTREGA</span><b>6 semanas</b></div><div><span>MODELO</span><b>Desarrollo a medida</b></div><div><span>OPERACIÓN</span><b>Infraestructura propia</b></div></div>
       </div>
-      <aside class="system-card" aria-label="Resumen del sistema">
-        <div class="system-card__head"><span class="status"><i></i> SISTEMA PROPUESTO</span><span>EDU-001</span></div>
-        <div class="flow"><div class="flow__node active"><span>01</span><b>Docente</b><small>crea una dinámica</small></div><div class="flow__line"></div><div class="flow__node"><span>02</span><b>Estudiante</b><small>accede y aprende</small></div><div class="flow__line"></div><div class="flow__node"><span>03</span><b>Institución</b><small>lee el progreso</small></div></div>
-        <div class="system-card__bottom"><div><small>FOCO</small><strong>Inglés + vida</strong></div><div><small>CONTENIDO</small><strong>Docente autor</strong></div><div><small>DATOS</small><strong>Internos</strong></div></div>
-      </aside>
+
+      <div class="system-visual reveal" aria-label="Flujo de la plataforma propuesta">
+        <div class="system-visual__head"><span><i></i> SISTEMA PROPUESTO</span><b>EDU · 001</b></div>
+        <div class="system-visual__canvas">
+          <svg viewBox="0 0 560 520" role="img" aria-label="El docente crea, el estudiante aprende y la institución observa el progreso">
+            <defs><linearGradient id="flow-gradient" x1="0" x2="1"><stop stop-color="#b9ff57"/><stop offset="1" stop-color="#54f4c8"/></linearGradient></defs>
+            <path data-flow-path class="flow-path" d="M120 112C292 45 452 112 442 256C434 380 308 467 150 401C33 353 42 188 120 112Z"/>
+            <path class="flow-orbit" d="M280 52A208 208 0 1 1 279 52"/>
+            <g class="flow-node flow-node--teacher" transform="translate(121 123)"><circle r="57"/><text y="-8" text-anchor="middle">01</text><text class="flow-node__main" y="16" text-anchor="middle">DOCENTE</text></g>
+            <g class="flow-node flow-node--student" transform="translate(438 241)"><circle r="57"/><text y="-8" text-anchor="middle">02</text><text class="flow-node__main" y="16" text-anchor="middle">ESTUDIANTE</text></g>
+            <g class="flow-node flow-node--institution" transform="translate(160 402)"><circle r="57"/><text y="-8" text-anchor="middle">03</text><text class="flow-node__main" y="16" text-anchor="middle">INSTITUCIÓN</text></g>
+            <g class="flow-core" transform="translate(279 258)"><circle r="74"/><text y="-12" text-anchor="middle">PLATAFORMA</text><text class="flow-core__main" y="17" text-anchor="middle">PROPIA</text><text y="39" text-anchor="middle">INGLÉS + VIDA</text></g>
+            <text class="flow-caption" x="214" y="92">CREA DINÁMICAS</text><text class="flow-caption" x="390" y="360">APRENDE</text><text class="flow-caption" x="88" y="284">LEE PROGRESO</text>
+          </svg>
+        </div>
+        <div class="system-visual__footer"><div><span>CONTENIDO</span><b>Docente autor</b></div><div><span>DATOS</span><b>Internos</b></div><div><span>EVOLUCIÓN</span><b>A medida</b></div></div>
+      </div>
     </section>
 
-    <section class="band"><div class="shell band__grid"><p>Una plataforma no reemplaza la relación pedagógica: le da al profesor más formas de diseñarla.</p><span>CONTEXTO · CONTROL · CONTINUIDAD</span></div></section>
+    <section class="statement"><div class="shell"><p class="reveal">Una plataforma no reemplaza la relación pedagógica.</p><strong class="reveal">Le da al profesor más formas de diseñarla.</strong><span>CONTEXTO · CONTROL · CONTINUIDAD</span></div></section>
 
-    <section class="section section--dark" id="alcance"><div class="shell"><div class="section-head section-head--light"><div class="kicker"><i></i> 01 — SISTEMA A DESARROLLAR</div><h2>Herramientas para que el docente <em>cree; </em>no un catálogo de clases prefabricadas.</h2><p>El alcance entrega el entorno y las herramientas. La creación pedagógica de clases, guías y dinámicas corresponde a los profesores de la institución.</p></div>
-      <div class="scope-grid"><article><span>01</span><h3>Consola docente</h3><p>Espacio para estructurar, publicar y gestionar dinámicas interactivas acordes a cada grupo y objetivo.</p></article><article><span>02</span><h3>Experiencia estudiante</h3><p>Acceso individual a actividades, rutas de aprendizaje y visualización clara de su avance.</p></article><article><span>03</span><h3>Roles y control</h3><p>Accesos diferenciados para administración, profesor y estudiante, con trazabilidad del progreso.</p></article><article><span>04</span><h3>Progreso individual</h3><p>Lectura de participación, avance y resultados para que el docente pueda orientar siguientes pasos.</p></article><article><span>05</span><h3>Información actualizable</h3><p>Base para conectar contenidos modernos y vigentes bajo criterios definidos por la institución.</p></article><article><span>06</span><h3>Agente interno de IA</h3><p>Componente de apoyo al desarrollo y evolución del sistema, con control humano y foco en la operación educativa.</p></article></div>
-      <div class="notice"><span>IMPORTANTE</span><p>La plataforma habilita al equipo para crear las experiencias. No contempla la producción de las clases o contenidos académicos por parte de spaceship.</p></div>
-    </div></section>
+    <section class="section section--light" id="alcance">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker reveal"><i></i> 01 · SISTEMA A DESARROLLAR</p>
+          <h2 class="reveal">Herramientas para que el docente <em>cree;</em> no un catálogo de clases prefabricadas.</h2>
+          <p class="section-head__aside reveal">El alcance entrega el entorno y las herramientas. La creación pedagógica de clases, guías y dinámicas corresponde a los profesores de la institución.</p>
+        </div>
 
-    <section class="section shell"><div class="section-head"><div class="kicker"><i></i> 02 — RUTA DE TRABAJO</div><h2>6 semanas desde que el equipo entregue <em>la información solicitada.</em></h2><p>El tiempo comienza cuando se cuenta con los insumos necesarios para dar inicio al desarrollo.</p></div>
-      <ol class="timeline"><li><span>SEMANA 01</span><h3>Definición operativa</h3><p>Información, estructura de roles, objetivos y mapa de experiencia.</p></li><li><span>SEMANA 02–03</span><h3>Núcleo del sistema</h3><p>Accesos, perfiles, estructura de actividades y base de operación.</p></li><li><span>SEMANA 04</span><h3>Experiencia educativa</h3><p>Herramientas docentes, recorrido del estudiante y registro de progreso.</p></li><li><span>SEMANA 05</span><h3>Integraciones y validación</h3><p>Información actualizable, componente de IA interno y pruebas funcionales.</p></li><li><span>SEMANA 06</span><h3>Entrega y transferencia</h3><p>Pruebas finales, entrega del sistema y 3 horas de capacitación incluidas.</p></li></ol>
+        <div class="architecture reveal" aria-label="Arquitectura funcional de la plataforma">
+          <div class="architecture__rail"><span>ARQUITECTURA FUNCIONAL</span><b>6 MÓDULOS CONECTADOS</b></div>
+          <div class="architecture__center"><i></i><span>OPERACIÓN<br>EDUCATIVA</span></div>
+          <svg viewBox="0 0 1000 460" aria-hidden="true">
+            <path data-architecture-path d="M500 230L160 88M500 230L500 57M500 230L840 88M500 230L160 372M500 230L500 403M500 230L840 372"/>
+          </svg>
+          <div class="module module--1"><span>01</span><b>Consola docente</b><small>Crear y gestionar</small></div>
+          <div class="module module--2"><span>02</span><b>Experiencia estudiante</b><small>Acceder y aprender</small></div>
+          <div class="module module--3"><span>03</span><b>Roles y control</b><small>Administrar accesos</small></div>
+          <div class="module module--4"><span>04</span><b>Progreso individual</b><small>Leer resultados</small></div>
+          <div class="module module--5"><span>05</span><b>Información actualizable</b><small>Mantener vigencia</small></div>
+          <div class="module module--6"><span>06</span><b>Agente interno de IA</b><small>Apoyar evolución</small></div>
+        </div>
+
+        <div class="scope-grid">
+          <article class="scope-card reveal"><span>01</span><div class="scope-card__icon"><i></i><i></i><i></i></div><h3>Consola docente</h3><p>Espacio para estructurar, publicar y gestionar dinámicas interactivas acordes a cada grupo y objetivo.</p></article>
+          <article class="scope-card reveal"><span>02</span><div class="scope-card__icon scope-card__icon--person"><i></i><i></i></div><h3>Experiencia estudiante</h3><p>Acceso individual a actividades, rutas de aprendizaje y visualización clara de su avance.</p></article>
+          <article class="scope-card reveal"><span>03</span><div class="scope-card__icon scope-card__icon--key"><i></i><i></i></div><h3>Roles y control</h3><p>Accesos diferenciados para administración, profesor y estudiante, con trazabilidad del progreso.</p></article>
+          <article class="scope-card reveal"><span>04</span><div class="scope-card__icon scope-card__icon--bars"><i></i><i></i><i></i></div><h3>Progreso individual</h3><p>Lectura de participación, avance y resultados para que el docente pueda orientar siguientes pasos.</p></article>
+          <article class="scope-card reveal"><span>05</span><div class="scope-card__icon scope-card__icon--refresh"><i>↻</i></div><h3>Información actualizable</h3><p>Base para conectar contenidos modernos y vigentes bajo criterios definidos por la institución.</p></article>
+          <article class="scope-card reveal"><span>06</span><div class="scope-card__icon scope-card__icon--ai"><i>✦</i></div><h3>Agente interno de IA</h3><p>Componente de apoyo al desarrollo y evolución del sistema, con control humano y foco en la operación educativa.</p></article>
+        </div>
+        <div class="notice reveal"><span>IMPORTANTE</span><p>La plataforma habilita al equipo para crear las experiencias. No contempla la producción de las clases o contenidos académicos por parte de spaceship.</p></div>
+      </div>
     </section>
 
-    <section class="section section--invest" id="inversion"><div class="shell"><div class="investment-head"><div><div class="kicker"><i></i> 03 — INVERSIÓN</div><h2>Construcción de la<br><em>plataforma propia.</em></h2></div><p>Valor de desarrollo e infraestructura para que la operación pueda administrarse internamente.</p></div>
-      <div class="price-card"><div class="price-card__main"><span>INVERSIÓN DE DESARROLLO</span><strong>$23.194.000 <small>COP</small></strong><p>Incluye infraestructura propia y 3 horas de capacitación sin costo.</p></div><div class="price-card__schedule"><div><span>50% · INICIO</span><b>$11.597.000</b><p>Al aprobar el inicio del desarrollo.</p></div><div><span>30% · ANTES DE FINALIZAR</span><b>$6.958.200</b><p>Previo a la etapa final de entrega.</p></div><div><span>20% · ENTREGA</span><b>$4.638.800</b><p>Al finalizar la implementación.</p></div></div></div>
-      <div class="extras"><div class="extra"><span>ADICIONAL 01</span><h3>Jornada de capacitación</h3><p>Sesión adicional de formación para el uso del sistema.</p><b>$320.000 COP <small>por jornada</small></b></div><div class="extra"><span>ADICIONAL 02 · OPCIONAL</span><h3>Servicio técnico y evolución</h3><p>Actualizaciones del sistema y desarrollo continuo para acompañar la evolución de la plataforma.</p><b>$4.000.000 COP</b></div></div>
-      <div class="terms"><p><b>Condición de inicio.</b> Las 6 semanas se cuentan desde que el equipo proporcione la información requerida para dar play al desarrollo.</p><p><b>Contenido académico.</b> Los profesores crean las clases y dinámicas usando las herramientas entregadas.</p></div>
-    </div></section>
+    <section class="section section--route" id="ruta">
+      <div class="shell">
+        <div class="route-head"><div><p class="kicker reveal"><i></i> 02 · RUTA DE TRABAJO</p><h2 class="reveal">De información completa a plataforma operativa en <em>6 semanas.</em></h2></div><div class="route-orbit reveal"><strong>06</strong><span>SEMANAS</span><svg viewBox="0 0 140 140" aria-hidden="true"><circle cx="70" cy="70" r="62"/><circle class="route-orbit__progress" cx="70" cy="70" r="62"/></svg></div></div>
+        <p class="route-intro reveal">El tiempo comienza cuando se cuenta con los insumos necesarios para dar inicio al desarrollo.</p>
+        <ol class="timeline">
+          <li class="reveal"><span>SEMANA 01</span><i></i><div><b>01</b><h3>Definición operativa</h3><p>Información, estructura de roles, objetivos y mapa de experiencia.</p></div></li>
+          <li class="reveal"><span>SEMANAS 02–03</span><i></i><div><b>02</b><h3>Núcleo del sistema</h3><p>Accesos, perfiles, estructura de actividades y base de operación.</p></div></li>
+          <li class="reveal"><span>SEMANA 04</span><i></i><div><b>03</b><h3>Experiencia educativa</h3><p>Herramientas docentes, recorrido del estudiante y registro de progreso.</p></div></li>
+          <li class="reveal"><span>SEMANA 05</span><i></i><div><b>04</b><h3>Integraciones y validación</h3><p>Información actualizable, componente de IA interno y pruebas funcionales.</p></div></li>
+          <li class="reveal"><span>SEMANA 06</span><i></i><div><b>05</b><h3>Entrega y transferencia</h3><p>Pruebas finales, entrega del sistema y 3 horas de capacitación incluidas.</p></div></li>
+        </ol>
+      </div>
+    </section>
 
-    <section class="sources shell"><div><div class="kicker"><i></i> DOCUMENTO COMPLEMENTARIO</div><h2>Decidir con contexto.</h2></div><ol><li><a href="https://estudio-mercado-plataforma-educativa.solversai.cloud/" target="_blank" rel="noreferrer">Ver estudio de mercado y posicionamiento frente a las alternativas existentes.</a></li></ol></section>
+    <section class="section section--investment" id="inversion">
+      <div class="shell">
+        <div class="investment-head"><div><p class="kicker reveal"><i></i> 03 · INVERSIÓN</p><h2 class="reveal">Construcción de la<br><em>plataforma propia.</em></h2></div><p class="reveal">Valor de desarrollo e infraestructura para que la operación pueda administrarse internamente.</p></div>
+
+        <div class="investment-card reveal">
+          <div class="investment-card__price"><span>INVERSIÓN DE DESARROLLO</span><strong>$23.194.000 <small>COP</small></strong><p>Incluye infraestructura propia y 3 horas de capacitación sin costo.</p></div>
+          <div class="payment-visual" aria-label="Plan de pagos 50 por ciento, 30 por ciento y 20 por ciento">
+            <div class="donut"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="78"/><circle class="donut__50" cx="100" cy="100" r="78"/><circle class="donut__30" cx="100" cy="100" r="78"/><circle class="donut__20" cx="100" cy="100" r="78"/></svg><div><b>3</b><span>MOMENTOS</span></div></div>
+            <div class="payment-list"><div><i class="pay-color pay-color--50"></i><span>50% · INICIO</span><b>$11.597.000</b><small>Al aprobar el inicio.</small></div><div><i class="pay-color pay-color--30"></i><span>30% · ANTES DE FINALIZAR</span><b>$6.958.200</b><small>Previo a la entrega final.</small></div><div><i class="pay-color pay-color--20"></i><span>20% · ENTREGA</span><b>$4.638.800</b><small>Al finalizar la implementación.</small></div></div>
+          </div>
+        </div>
+
+        <div class="extras">
+          <article class="extra reveal"><span>ADICIONAL 01</span><div class="extra__number">+01</div><h3>Jornada de capacitación</h3><p>Sesión adicional de formación para el uso del sistema.</p><b>$320.000 COP <small>por jornada</small></b></article>
+          <article class="extra reveal"><span>ADICIONAL 02 · OPCIONAL</span><div class="extra__number">∞</div><h3>Servicio técnico y evolución</h3><p>Actualizaciones del sistema y desarrollo continuo para acompañar la evolución de la plataforma.</p><b>$4.000.000 COP</b></article>
+        </div>
+
+        <div class="terms reveal"><div><span>01</span><p><b>Condición de inicio.</b> Las 6 semanas se cuentan desde que el equipo proporcione la información requerida para dar play al desarrollo.</p></div><div><span>02</span><p><b>Contenido académico.</b> Los profesores crean las clases y dinámicas usando las herramientas entregadas.</p></div></div>
+      </div>
+    </section>
+
+    <section class="closing"><div class="shell closing__inner"><div class="reveal"><p class="kicker"><i></i> PROPUESTA LISTA</p><h2>El siguiente paso es<br><em>darle forma juntos.</em></h2></div><a class="closing__download reveal" href="/docs/cotizacion-plataforma-aprendizaje.pdf" download><span>Descargar cotización PDF</span><i>↓</i></a></div></section>
   </main>
-  <footer><div class="shell"><a class="brand" href="#inicio"><svg viewBox="0 0 200 100" aria-hidden="true"><path d="M20 50C20 22 62 22 100 50c38 28 80 28 80 0"/><path d="M180 50c0-28-42-28-80 0C62 78 20 78 20 50"/><circle cx="20" cy="50" r="7"/><circle cx="180" cy="50" r="7"/></svg><span>spaceship</span></a><span>COTIZACIÓN COMERCIAL · PLATAFORMA EDUCATIVA PERSONALIZADA</span></div></footer>
+
+  <footer><div class="shell"><a class="brand" href="#inicio"><svg viewBox="0 0 200 100" aria-hidden="true"><path d="M20 50C20 22 62 22 100 50c38 28 80 28 80 0"/><path d="M180 50c0-28-42-28-80 0C62 78 20 78 20 50"/><circle cx="20" cy="50" r="7"/><circle cx="180" cy="50" r="7"/></svg><span>spaceship</span></a><span>COTIZACIÓN COMERCIAL · 11 AGO 2026</span><span>PLATAFORMA EDUCATIVA PERSONALIZADA</span></div></footer>
 </body>
 </html>

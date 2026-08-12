@@ -1,6 +1,42 @@
-/* Composición de la versión descargable: mantiene los adicionales como bloque completo. */
+@page { size: A4; margin: 12mm; }
+
 @media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  html, body { background: #eef1e9 !important; }
+  body::before, .scroll-progress, .topbar, .hero__actions { display: none !important; }
+  .reveal, [data-split], .word-mask, .word-mask > * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+  .shell { width: 100% !important; max-width: none !important; }
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 10mm; padding: 5mm 0 12mm; break-after: page; }
+  .hero h1 { max-width: 160mm; font-size: 42pt; }
+  .hero h1, .hero h1 .word-mask > span { color: #06110e !important; }
+  .hero h1 em, .hero h1 .word-mask > em { color: #12886b !important; }
+  .hero__lead { max-width: 150mm; font-size: 12pt; }
+  .hero__facts b { color: #06110e !important; }
+  .hero__facts { max-width: 160mm; }
+  .system-visual { width: 100%; min-height: 165mm; break-inside: avoid; }
+  .system-visual__canvas { height: 136mm; }
+  .statement { margin-inline: -12mm; padding-inline: 12mm; }
+  .statement .shell { min-height: 28mm; }
+  .section { padding: 14mm 0; }
+  .section-head h2, .route-head h2, .investment-head h2 { font-size: 31pt; }
+  .section-head__aside { font-size: 10pt; }
+  .architecture { min-height: 145mm; break-before: page; break-inside: avoid; }
+  .scope-grid { grid-template-columns: repeat(2,1fr); gap: 4mm; margin-top: 10mm; }
+  .scope-card { min-height: 58mm; padding: 6mm; break-inside: avoid; }
+  .scope-card h3 { margin-top: 12mm; font-size: 15pt; }
+  .notice { break-inside: avoid; }
+  .section--route { break-before: page; }
+  .route-orbit { width: 35mm; height: 35mm; }
+  .timeline { margin-top: 12mm; }
+  .timeline li { min-height: 31mm; break-inside: avoid; }
+  .timeline div { padding-bottom: 6mm; }
+  .section--investment { break-before: page; }
+  .investment-card { grid-template-columns: 1fr; break-inside: avoid; }
+  .investment-card__price { min-height: 75mm; }
+  .payment-visual { min-height: 90mm; }
   .extras { break-before: page; }
   .extra, .terms { break-inside: avoid; }
-  .sources { break-before: page; }
+  .closing { min-height: auto; margin-inline: -12mm; padding-inline: 12mm; }
+  .closing__inner { min-height: 105mm; }
+  footer { margin-inline: -12mm; padding-inline: 12mm; }
 }
